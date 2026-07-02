@@ -27,3 +27,11 @@ dpkg --configure -a
 apt install -f
 
 
+---
+
+sudo sed -i 's/archive.ubuntu.com/old-releases.ubuntu.com/g' /etc/apt/sources.list
+sudo sed -i 's/security.ubuntu.com/old-releases.ubuntu.com/g' /etc/apt/sources.list
+
+sudo apt update
+sudo apt install curl -y
+
